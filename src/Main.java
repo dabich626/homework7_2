@@ -5,9 +5,26 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
         }
 
+    private static void task6() {
+        int salary = 15000;
+        int bankPercent = (salary/100)*7;
+        int mounth = 0;
+        int totalSaved = 15000;
+        while(mounth<108){
+            mounth = mounth + 1;
+            bankPercent = (totalSaved/100)*7;
+            totalSaved = totalSaved+bankPercent;
+            if (mounth%6 ==0){
+                System.out.println("месяц " + mounth + " сумма на счете " + totalSaved);
+            }
+        }
+    }
+
     private static void task5() {
+        ///видоизменено ниже в задаче 4
     }
 
     private static void task3() {
@@ -39,7 +56,8 @@ public class Main {
             mounth = mounth + 1;
             bankBonuse1 = totalSavedMoney/100*7;
             totalSavedMoney = totalSavedMoney + bankBonuse1;
-            System.out.println("месяц " + mounth + ". сумма накоплений на счете составляет " +totalSavedMoney);
+            if(mounth%6 == 0){
+            System.out.println("месяц " + mounth + ". сумма накоплений на счете составляет " +totalSavedMoney);}
         }
     }
 }
