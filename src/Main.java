@@ -29,18 +29,19 @@ public class Main {
 
     private static void task3() {
         int totalY = 12000000;
-        int fertility = 17/1000;
-        int mortality = 8/1000;
-        int growth = fertility - mortality;
-        int naturalGrowth =  + (growth/totalY)*1000;
-        int totalGrowth = totalY+naturalGrowth;
-        System.out.println("в первый год численность населения составит " + totalGrowth);
-        int year = 0;
-        while(year<10){
-            year = year + 1;
-            totalGrowth = totalGrowth + naturalGrowth;
-            System.out.println("год " + year + ". население страны Y составляет: " + totalGrowth);
-        }
+       int fertility = 17;
+       int mortality = 8;
+     int fertilityInYear = fertility * (totalY/1000);
+     int mortalityInYear = mortality * (totalY/1000);
+     int growthInYear = fertilityInYear - mortalityInYear;
+     int year = 0;
+     while (year<10){
+         year = year + 1;
+         totalY = totalY + (fertilityInYear - mortalityInYear);
+         System.out.println("год " + year + ". численность населения составляет " + totalY);
+
+     }
+
         }
 
 
