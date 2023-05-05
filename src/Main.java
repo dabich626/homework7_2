@@ -38,7 +38,7 @@ public class Main {
         while (year<10){
             year = year + 1;
             totalY = totalY + (fertilityInYear - mortalityInYear);
-            System.out.println("год  " + year + ". численность населения составляет " + totalY);
+            System.out.println("год " + year + ". численность населения составляет " + totalY);
 
         }
 
