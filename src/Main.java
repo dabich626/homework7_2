@@ -31,11 +31,11 @@ public class Main {
         int totalY = 12000000;
         int fertility = 17;
         int mortality = 8;
-        int fertilityInYear = fertility * (totalY/1000);
-        int mortalityInYear = mortality * (totalY/1000);
-        int growthInYear = fertilityInYear - mortalityInYear;
+
         int year = 0;
         while (year<10){
+            int fertilityInYear = fertility * (totalY/1000);
+            int mortalityInYear = mortality * (totalY/1000);
             year = year + 1;
             totalY = totalY + (fertilityInYear - mortalityInYear);
             System.out.println("год " + year + ". численность населения составляет " + totalY);
