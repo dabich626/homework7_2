@@ -31,7 +31,6 @@ public class Main {
         int totalY = 12000000;
         int fertility = 17;
         int mortality = 8;
-
         int year = 0;
         while (year<10){
             int fertilityInYear = fertility * (totalY/1000);
